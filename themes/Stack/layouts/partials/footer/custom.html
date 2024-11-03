@@ -1,0 +1,36 @@
+<script>
+    var pjax = new Pjax({
+    selectors: [
+        ".sidebar",
+        ".main-article",
+        ".search-form"
+
+    ]
+    })
+
+    pjax._handleResponse = pjax.handleResponse;
+    pjax.handleResponse = function(responseText, request, href, options) {
+        if (request.responseText.match("<html")) {
+            let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+            let bodyClass = newDom.body.className;
+            document.body.setAttribute("class", bodyClass)
+            pjax._handleResponse(responseText, request, href, options);
+        } else {
+
+        }
+    }
+
+    document.addEventListener('pjax:complete', () => {
+        window.Stack.init();
+    })
+</script>
+
+<script>
+
+
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
