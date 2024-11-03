@@ -13,7 +13,7 @@
     data-theme="{{- default `light` .lightTheme -}}"
     data-lang="{{- default (default `en` $.Language.LanguageCode) .lang -}}"
     data-loading="{{- .loading -}}"
-    crossorigin="anonymous"
+    crossorigin="{{- .crossorigin -}}"
     async
 ></script>
 <script>

@@ -127,16 +127,21 @@ defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
 serverName = "cactus.chat"
 siteName = ""
 
+
 [comments.giscus]
 repo = ""
 repoID = ""
 category = ""
 categoryID = ""
 mapping = ""
+strict = "0"
 lightTheme = ""
 darkTheme = ""
 reactionsEnabled = 1
 emitMetadata = 0
+inputPosition = ""
+lang = "zh-CN"
+crossorigin="anonymous"
 
 [comments.gitalk]
 owner = ""
