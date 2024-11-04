@@ -1,8 +1,8 @@
 ---
 title: 友链
 links:
-  - title: 小林的研究存档
-    description: 小林的研究存档
+  - title: 小林记事本
+    description: 有关小林的一切存档
     website: https://linmod.de
     image: https://q1.qlogo.cn/g?b=qq&nk=1919988942&s=640
 menu:
@@ -13,7 +13,6 @@ menu:
 
 comments: true
 ---
-
 请按以下格式给我你的链接信息。
 
 ```yaml

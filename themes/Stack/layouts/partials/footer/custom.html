@@ -1,9 +1,15 @@
 <script>
     var pjax = new Pjax({
     selectors: [
-        ".sidebar",
+        "#main-menu",
+        ".article-list",
+        "meta",
+        "head > title",
+        ".right-sidebar",
         ".main-article",
         ".search-form",
+        ".section-title",
+        ".archives-group",
         "body > div > main > header",
         "body > div > main > section",
         "body > div > main > div.article-list--compact.links > article > a",
@@ -25,6 +31,9 @@
 
     document.addEventListener('pjax:complete', () => {
         window.Stack.init();
+        // const newTitle = document.querySelector('title').innerText; 
+        // console.log(newTitle)
+        // document.title = newTitle;
     })
 </script>
 
@@ -34,6 +43,10 @@
     NProgress.start();
     document.addEventListener("readystatechange", () => {
         if (document.readyState === "interactive") NProgress.inc(0.8);
-        if (document.readyState === "complete") NProgress.done();
+        if (document.readyState === "complete") {
+            setTimeout(()=>{
+                NProgress.done();
+            },1500)
+        }
     });
 </script>

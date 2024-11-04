@@ -34,9 +34,13 @@ notFound:
         other: 页面不存在
 
 widget:
+    diray:
+        title:
+            other: 日记
+
     archives:
         title:
-            other: 归档
+            other: 档案
 
         more:
             other: 更多

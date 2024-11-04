@@ -6,6 +6,8 @@ module:
 params:
     mainSections:
         - post
+    diraySections:
+        - diray
     featuredImageField: image
     rssFullContent: true
     favicon: favicon.ico
